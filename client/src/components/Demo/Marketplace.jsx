@@ -14,7 +14,7 @@ export const Marketplace = () => {
       const totalItem = await contracts.Marketplace.methods.totalItem().call();
       const _listItem = [];
       for (let itemId = 0; itemId < totalItem; itemId++) {
-        const itemListed = await contracts.Marketplace.methods.items(itemId).call();
+        const itemListed = await contracts.Marketplace.methods.item(itemId).call();
         const metadataOfTokenId = await contracts.MyCollection.methods
           .tokenMetadata(itemListed.tokenId)
           .call();
