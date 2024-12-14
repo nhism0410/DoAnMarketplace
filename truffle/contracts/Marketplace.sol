@@ -17,7 +17,7 @@ contract Marketplace {
         address buyer;
     }
 
-    mapping(uint256 => Item) public item;
+    mapping(uint256 => Item) public items;
 
     event Sell(uint256 itemId);
     event Buy(uint256 itemId);
@@ -32,7 +32,7 @@ contract Marketplace {
         uint256 price
     ) public {
         IERC721(nftContract).transferFrom(msg.sender, address(this), tokenId);
-        item[idCounter.current()] = Item (
+        items[idCounter.current()] = Item (
             nftContract,
             tokenId,
             price,
@@ -44,13 +44,13 @@ contract Marketplace {
     }
     
     function buyNft(uint256 itemId) external payable {
-        Item memory _item = item[itemId];
+        Item memory _item = items[itemId];
         require(_item.price == msg.value, "Marketplace: only full payments accepted"); //chỉ chấp nhận thanh toán đầy đủ
         require(_item.seller != address(0), "Marketplace: not for sell"); //Không phải để bán
         
         IERC721(_item.nftContract).transferFrom(address(this), msg.sender, _item.tokenId);
         payable(_item.seller).transfer(msg.value);
-        item[itemId].buyer = msg.sender;
+        items[itemId].buyer = msg.sender;
         emit Buy(itemId);
     }
 }

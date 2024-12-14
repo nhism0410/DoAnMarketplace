@@ -1,0 +1,119 @@
+/* Căn giữa toàn bộ container */
+.product-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Chiều cao của phần tử chứa form */
+    flex-direction: column;
+    margin: 0; /* Bỏ khoảng cách mặc định từ trên xuống */
+    padding: 20px;
+  }
+  
+  /* Căn giữa phần tiêu đề */
+  .header-section {
+    text-align: center;
+    margin-bottom: 20px; /* Khoảng cách giữa header và form */
+    width: 100%;
+  }
+  
+  /* Flex container cho form */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 550px;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px;
+    padding: 24px;
+  }
+  
+  /* Căn giữa phần tiêu đề và contract address */
+  .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style for Identicon and contract address */
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .ml-2 {
+    margin-left: 10px;
+  }
+  
+  /* Bố cục của form */
+  .form-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  /* Kiểu dáng phần form bên phải */
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  /* Input fields */
+  .form-control.my-3 {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border 0.3s;
+  }
+  
+  /* Hover effect for input fields */
+  .form-control.my-3:focus {
+    border-color: #549cd6;
+    outline: none;
+  }
+  
+  /* Nút "Sell" */
+  .btn.btn-primary {
+    padding: 12px 20px;
+    background-color: #549cd6;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for button */
+  .btn.btn-primary:hover {
+    background-color: #3b7c5e;
+  }
+  
+  /* Optional Image Section */
+  .image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  /* Placeholder text when no image */
+  .upload-placeholder {
+    font-size: 14px;
+    font-weight: bold;
+    color: #aaa;
+  }
+  

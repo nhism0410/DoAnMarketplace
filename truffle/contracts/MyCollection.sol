@@ -8,14 +8,13 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 contract MyCollection is ERC721 {
     using Counters for Counters.Counter;
     Counters.Counter private idCounter;
-    constructor(
-        string memory _name,
-        string memory _symbol 
-    ) ERC721(_name, _symbol) {}
-        
+
+    constructor(string memory _name, string memory _symbol) ERC721(_name, _symbol) {}
+
     struct TokenMetadata {
         string name;
         string description;
+        string imageUrl;  
     }
 
     mapping(uint256 => TokenMetadata) public tokenMetadata;
@@ -27,10 +26,12 @@ contract MyCollection is ERC721 {
     function mint(
         address to,
         string memory name,
-        string memory description
+        string memory description,
+        string memory imageUrl  
     ) public {
-        _mint(to, idCounter.current());
-        tokenMetadata[idCounter.current()] = TokenMetadata (name, description);
+        uint256 tokenId = idCounter.current();
+        _mint(to, tokenId);
+        tokenMetadata[tokenId] = TokenMetadata(name, description, imageUrl); 
         idCounter.increment();
     }
 }

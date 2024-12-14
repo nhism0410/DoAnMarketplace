@@ -1,16 +1,17 @@
+import React from "react";
 import { EthProvider } from "./contexts/EthContext";
-import  Demo  from "./components/Demo";
+// import Demo from "./components/Demo";
+import Main from "./components/Main/Main";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  
+const App = () => {
   return (
     <EthProvider>
-        <div className="container">
-          <Demo/>
-        </div>
+      <div className="App">
+        <Main />
+      </div>
     </EthProvider>
   );
-}
+};
 
 export default App;

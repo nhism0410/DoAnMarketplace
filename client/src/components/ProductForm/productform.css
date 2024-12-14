@@ -1,0 +1,92 @@
+/* Center the header section */
+.header-section {
+  text-align: center;
+}
+
+/* Flex container for Create Item form */
+/* Container chính của form */
+.form-container {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 800px; /* Tăng chiều rộng tối đa của form */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 14px 14px 0px, rgba(0, 0, 0, 0.15) 0px 0px 15px 0px;
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap; /* Cho phép phần tử bên trong flex có thể quấn xuống dòng khi cần */
+}
+
+/* Căn giữa <h2> */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%; /* Đảm bảo <h2> chiếm toàn bộ chiều rộng */
+}
+
+/* Bố cục tổng thể của form */
+.form-content {
+  display: flex;
+  justify-content: flex-start; /* Đặt các phần tử bắt đầu từ trái */
+  align-items: flex-start; /* Canh phần tử theo chiều dọc bắt đầu từ trên */
+  width: 100%;
+}
+
+/* Phần upload ảnh nằm bên trái */
+.image-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px; /* Đặt chiều rộng cố định cho phần ảnh */
+  height: auto;
+  min-height: 300px; /* Đảm bảo có chiều cao tối thiểu */
+  border: 1px solid #ddd;
+  margin-right: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.upload-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #aaa;
+}
+
+/* Kiểu dáng cho phần form bên phải */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 200px;
+  width: 100%;
+}
+
+/* Form controls styling */
+.form-control.my-3 {
+  margin-bottom: 15px;
+}
+
+/* Nút "Create" */
+.btn.btn-primary {
+  padding: 10px 20px;
+  background-color: #549cd6;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.btn-primary:hover {
+  background-color: #3b7c5e;
+}
+
+/* Điều chỉnh hiển thị ảnh */
+.image-section img {
+  width: 100%;  /* Chiếm toàn bộ chiều rộng của phần image-section */
+  height: auto; /* Đảm bảo tỷ lệ ảnh được giữ nguyên */
+  object-fit: contain; /* Đảm bảo ảnh không bị cắt */
+}

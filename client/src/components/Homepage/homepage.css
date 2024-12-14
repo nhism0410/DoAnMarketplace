@@ -1,0 +1,20 @@
+.hero__section {
+    width: 100%;
+    height: auto;
+    padding: 10;
+    margin: 0;
+  }
+/* Cập nhật slider-container để hiển thị 1 hình ảnh mỗi lần */
+.single-image-container {
+    text-align: center;
+
+  }
+  
+  .single-image {
+    width: 100%; /* Điều chỉnh độ rộng của hình ảnh */
+    height: 450px;
+    object-fit: cover; /* Cắt và phóng đại ảnh nếu cần */
+  }
+  
+
+  

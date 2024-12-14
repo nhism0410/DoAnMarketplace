@@ -9,9 +9,11 @@ module.exports = {
   entry: "./src/index.jsx",
   output: {
     path: path.resolve(__dirname, "build"),
+    filename: "[name].[contenthash].js",  // Optional for better cache management
   },
   resolve: { extensions },
   devServer: {
+    historyApiFallback: true, 
     client: {
       overlay: false,
     },
@@ -33,6 +35,17 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[hash].[ext]", // You can customize the name and path of the output file
+            },
+          },
+        ],
       },
     ],
   },
